@@ -1,7 +1,12 @@
+// import useInput from "../../hooks/use-input";
 import classes from "./CheckOut.module.css";
 
 function CheckOut(props) {
   // VARIABLES: STATES --------------------------------------- //
+  // const {} = useInput((input) => input.trim() !== "");
+  // const {} = useInput((input) => input.trim() !== "");
+  // const {} = useInput((input) => input.trim() !== "");
+  // const {} = useInput((input) => input.trim() !== "");
 
   // FUNCTION: ----------------------------------------------- //
   const mealsToConfirm = props.context.items.map((item) => (

@@ -13,6 +13,7 @@
 }
 
 .recipe h3 {
+  font-size: 1rem;
   margin: 0 0 0.5rem 0;
   color: #363636;
   text-overflow: ellipsis;
@@ -37,9 +38,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+  margin-top: 1rem;
 }
 
 .recipe-bottom span:first-child {
+  font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
   color: #000;
   font-size: 18px;
@@ -61,7 +64,7 @@
 
 .form {
   width: 100%;
-  margin: 4rem 0 0 0;
+  margin-top: 2rem;
   padding: 0 1rem;
   max-height: 15rem;
   overflow: auto;

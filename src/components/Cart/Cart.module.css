@@ -7,13 +7,17 @@
   border-bottom: 1px solid #ccc;
 }
 
+.cart-items h2 {
+  font-size: 1.25rem;
+}
+
 .total {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
   font-size: 1.5rem;
-  margin: 1rem 0;
+  margin: 2rem 0 1.2rem;
 }
 
 .actions {
