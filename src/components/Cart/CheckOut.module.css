@@ -1,0 +1,128 @@
+.recipe {
+  max-height: 10rem;
+  overflow: auto;
+  list-style: none;
+  padding: 0 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+.recipe li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+
+.recipe h3 {
+  margin: 0 0 0.5rem 0;
+  color: #363636;
+  text-overflow: ellipsis;
+}
+
+.recipe div {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.recipe div span {
+  font-weight: bold;
+  color: #8a2b06;
+  text-align: right;
+}
+
+.recipe-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.recipe-bottom span:first-child {
+  margin: 0 0 0.5rem 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.recipe-bottom span {
+  font-weight: bold;
+  color: #8a2b06;
+  text-align: right;
+}
+
+.inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form {
+  width: 100%;
+  margin: 4rem 0 0 0;
+  padding: 0 1rem;
+  max-height: 15rem;
+  overflow: auto;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.control input {
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.actions button {
+  font: inherit;
+  color: #5a1a01;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #ffe6dc;
+}
+
+.actions .submit {
+  border: 1px solid #5a1a01;
+  background-color: #5a1a01;
+  color: white;
+}
+
+.actions .submit:hover,
+.actions .submit:active {
+  background-color: #7a2706;
+}
+
+.invalid label {
+  color: #ca3e51;
+}
+
+.invalid input {
+  border-color: #aa0b20;
+  background-color: #ffeff1;
+}
