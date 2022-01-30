@@ -8,9 +8,9 @@ function CheckOut(props) {
     <li key={item.id}>
       <h3>{item.name}</h3>
       <div>
-        <span>{`$${item.price.toFixed(2)}`}</span>
+        <span>{`€${item.price.toFixed(2)}`}</span>
         <span>{item.amount}</span>
-        <span>{`$${(item.amount * item.price).toFixed(2)}`}</span>
+        <span>{`€${(item.amount * item.price).toFixed(2)}`}</span>
       </div>
     </li>
   ));

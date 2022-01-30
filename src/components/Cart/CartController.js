@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import CartContext from "../../store/cart-context";
+import CartContext from "../../context/cart-context";
 
 import Modal from "../UI/Modal";
 import Cart from "./Cart";
@@ -9,25 +9,26 @@ function CartController(props) {
   const [isCheckOut, setIsCheckOut] = useState(false);
 
   // VARIABLES: ------------------------------------------------//
-  const cartCtx = useContext(CartContext);
+  const cartContext = useContext(CartContext);
 
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
-  const hasItems = cartCtx.items.length > 0;
+  const totalAmount = `€${cartContext.totalAmount.toFixed(2)}`;
+  const hasItems = cartContext.items.length > 0;
 
   const cartContextProp = {
-    items: cartCtx.items,
+    items: cartContext.items,
     totalAmount,
     hasItems,
   };
   // --------- ------------------------------------------------//
 
   // FUNCTION: HANDLERS -------------------------------------- //
-  const cartItemRemoveHandler = (id) => {
-    cartCtx.removeItem(id);
+  const addToCartHandler = (item) => {
+    cartContext.addItem({ ...item, amount: 1 });
   };
 
-  const cartItemAddHandler = (item) => {
-    cartCtx.addItem({ ...item, amount: 1 });
+  const removeFromCartHandler = (item) => {
+    cartContext.removItem(item);
+    return;
   };
 
   const orderHandler = (e) => {
@@ -47,13 +48,13 @@ function CartController(props) {
   // -------- HANDLERS -------------------------------------- //
 
   return (
-    <Modal onClose={props.onClose}>
+    <Modal onClose={props.onCartClose}>
       {!isCheckOut && (
         <Cart
-          onClose={props.onClose}
+          onClose={props.onCartClose}
           context={cartContextProp}
-          onRemove={cartItemRemoveHandler}
-          onAdd={cartItemAddHandler}
+          onRemove={removeFromCartHandler}
+          onAdd={addToCartHandler}
           onOrder={orderHandler}
         />
       )}
@@ -62,7 +63,7 @@ function CartController(props) {
           context={cartContextProp}
           onConfirm={confirmOrderHandler}
           onCancel={cancelOrderHandler}
-          onClose={props.onClose}
+          onClose={props.onCartClose}
         />
       )}
     </Modal>
