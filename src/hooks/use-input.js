@@ -11,6 +11,10 @@ function useInput(validatorFuction) {
     setInputValue(e.target.value);
   };
 
+  const touchedInput = () => {
+    setIsTouched(true);
+  };
+
   const blurHandler = () => {
     setIsTouched(true);
   };
@@ -26,6 +30,7 @@ function useInput(validatorFuction) {
     isInputError,
     blurHandler,
     changeHandler,
+    touchedInput,
     resetInput,
   };
 }

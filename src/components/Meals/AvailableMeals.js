@@ -2,6 +2,7 @@ import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 import classes from "./AvailableMeals.module.css";
 import { useEffect, useState } from "react";
+import { DATABASE_URL } from "../../config/config";
 
 const AvailableMeals = () => {
   const [mealData, setMealData] = useState([]);
@@ -12,9 +13,7 @@ const AvailableMeals = () => {
     const fetchMeals = async () => {
       setIsLoading(true);
       try {
-        const res = await fetch(
-          "https://react-study-bec9c-default-rtdb.asia-southeast1.firebasedatabase.app/meals.json"
-        );
+        const res = await fetch(`${DATABASE_URL}/meals.json`);
         if (!res.ok) throw new Error("Unable to fetch data!");
 
         const rawData = await res.json();
@@ -25,10 +24,10 @@ const AvailableMeals = () => {
         setMealData(data);
       } catch (err) {
         setIsError(err);
-        setIsLoading(false);
         console.error(err.message);
+      } finally {
+        setIsLoading(false);
       }
-      setIsLoading(false);
     };
 
     fetchMeals();

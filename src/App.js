@@ -8,12 +8,10 @@ function App() {
   const [openCartIs, setOpenCartIs] = useState(false);
 
   const openCartModalHandler = (e) => {
-    e.preventDefault();
     setOpenCartIs(true);
   };
 
   const closeCartModalHandler = (e) => {
-    e.preventDefault();
     setOpenCartIs(false);
   };
 
