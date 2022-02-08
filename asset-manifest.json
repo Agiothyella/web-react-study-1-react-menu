@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/web-react-study-1-react-menu/static/css/main.88e5d31f.chunk.css",
+    "main.js": "/web-react-study-1-react-menu/static/js/main.3de2089a.chunk.js",
+    "main.js.map": "/web-react-study-1-react-menu/static/js/main.3de2089a.chunk.js.map",
+    "runtime-main.js": "/web-react-study-1-react-menu/static/js/runtime-main.e1f7b2fa.js",
+    "runtime-main.js.map": "/web-react-study-1-react-menu/static/js/runtime-main.e1f7b2fa.js.map",
+    "static/js/2.95965ced.chunk.js": "/web-react-study-1-react-menu/static/js/2.95965ced.chunk.js",
+    "static/js/2.95965ced.chunk.js.map": "/web-react-study-1-react-menu/static/js/2.95965ced.chunk.js.map",
+    "index.html": "/web-react-study-1-react-menu/index.html",
+    "static/css/main.88e5d31f.chunk.css.map": "/web-react-study-1-react-menu/static/css/main.88e5d31f.chunk.css.map",
+    "static/js/2.95965ced.chunk.js.LICENSE.txt": "/web-react-study-1-react-menu/static/js/2.95965ced.chunk.js.LICENSE.txt",
+    "static/media/meals.2971f633.jpg": "/web-react-study-1-react-menu/static/media/meals.2971f633.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1f7b2fa.js",
+    "static/js/2.95965ced.chunk.js",
+    "static/css/main.88e5d31f.chunk.css",
+    "static/js/main.3de2089a.chunk.js"
+  ]
+}
