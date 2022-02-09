@@ -1,4 +1,4 @@
-# React Meals static web app
+# React Meals - Static single-page web application
 
 Demo: https://agiothyella.github.io/web-react-study-1-react-menu/
 
